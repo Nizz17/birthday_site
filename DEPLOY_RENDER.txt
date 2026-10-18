@@ -1,0 +1,5 @@
+Deployment notes:
+1. Create a private or public GitHub repository and upload the CONTENTS of this folder (app.py, templates/, static/, requirements.txt, Procfile, render.yaml).
+2. In Render, create a new Web Service and connect that GitHub repository.
+3. Render should detect render.yaml. If configuring manually, build command: pip install -r requirements.txt ; start command: gunicorn app:app --bind 0.0.0.0:$PORT
+4. Deploy. Render gives you a stable public URL that works without keeping Google Colab open. Free instances may sleep after inactivity and take a little time to wake up.
